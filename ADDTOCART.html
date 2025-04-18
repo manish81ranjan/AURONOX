@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add to Cart Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="ADDTOCART.CSS">
+</head>
+
+<body>
+
+    <!-- Cart icon at top right -->
+    <header>
+        <!-- <div class="cart-container">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" >0</span>
+        </div> -->
+
+        <div class="cart-layout">
+            <!-- Left: Product Listing -->
+            <div class="product-section">
+                <h2>Our Watches</h2>
+                <div class="product-list" id="productList">
+                    <!-- Your existing product cards will go here -->
+                    <!-- Place all your watch-card elements here -->
+                    <section class="products">
+                        <div class="watch-grid">
+                            <div class="watch-card">
+                                <img src="product 4.jpeg" alt="Rolex Submariner" />
+                                <div class="watch-info">
+                                    <h3>Rolex Submariner</h3>
+                                    <p class="price">₹77,500</p>
+                                    <p class="desc">Luxury diving watch with automatic movement and a timeless design.
+                                    </p>
+                                    <button class="shop-btn">Add to Cart</button>
+                                </div>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+
+                            </div>
+                            <div class="watch-card">
+                                <img src="product 5.webp" alt="Titan" />
+                                <div class="watch-info">
+                                    <h3>Titan</h3>
+                                    <p class="price">₹7,815</p>
+                                    <p class="desc">Men's Metropolitan Charm: Men's Multifunctional Black Watch with
+                                        Metallic Accents.
+                                    </p>
+                                    <button class="shop-btn">Add to Cart</button>
+                                </div>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="watch-card">
+                                <img src="product 7.avif" alt="Jacob & CO" />
+                                <div class="watch-info">
+                                    <h3>Jacob & CO</h3>
+                                    <p class="price">₹27,00,000</p>
+                                    <p class="desc">Epic X Titanium Powder Blue Neoralithe Inner Ring (Wonders of India
+                                        Edition).</p>
+                                    <button class="shop-btn">Add to Cart</button>
+                                </div>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="watch-card">
+                                <img src="product 8.jpeg" alt="Gucci" />
+                                <div class="watch-info">
+                                    <h3>Gucci</h3>
+                                    <p class="price">₹8,999</p>
+                                    <p class="desc">Gucci G-Timeless Watch White Dial With Star, Bee & Lions Head
+                                        Automatic Mens Watch.
+                                    </p>
+                                    <button class="shop-btn">Add to Cart</button>
+                                </div>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="watch-card">
+                                <img src="product 10.jpg" alt="Patek Philippe" />
+                                <div class="watch-info">
+                                    <h3>Patek Philippe</h3>
+                                    <p class="price">₹7,999</p>
+                                    <p class="desc">Patek Philippe Roman Numeral Dial Brown Leather Strap Men’s Watch.
+                                    </p>
+                                    <button class="shop-btn">Add to Cart</button>
+                                </div>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="watch-card">
+                                <img src="product 12.avif" alt="ORIS" />
+                                <div class="watch-info">
+                                    <h3>ORIS</h3>
+                                    <p class="price">₹235,000</p>
+                                    <p class="desc">Men Aquis Date - 01 733 7766 4150-SET.</p>
+                                    <button class="shop-btn">Add to Cart</button>
+                                </div>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="watch-card">
+                                <img src="product 13.avif" alt="DIESEL" />
+                                <div class="watch-info">
+                                    <h3>DIESEL</h3>
+                                    <p class="price">₹21,495</p>
+                                    <p class="desc">Men Mega Chief Chronograph Watch - DZ4338.</p>
+                                    <button class="shop-btn">Add to Cart</button>
+                                </div>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="watch-card">
+                                <img src="product 14.avif" alt="ROBERTO CAVALLI" />
+                                <div class="watch-info">
+                                    <h3>ROBERTO CAVALLI</h3>
+                                    <p class="price">₹26,663
+                                    </p>
+                                    <p class="desc">Women's Icona Donna Analogue Watch - RC5L092M0065.</p>
+                                    <button class="shop-btn">Add to Cart</button>
+                                </div>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Right: Cart Summary -->
+            <!-- <div class="cart-summary">
+                <h2>Your Cart (<span class="cart-count">0</span>)</h2>
+                <ul class="cart-items" id="cartItems"></ul>
+            </div> -->
+            <div class="cart-summary">
+                <h2>Your Cart (<span class="cart-count">0</span>)</h2>
+                <ul class="cart-items" id="cartItems"></ul>
+                <div class="cart-total">
+                    <hr />
+                    <h3>Total: ₹<span id="totalAmount">0</span></h3>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+    <script src="ADDTOCART.JS"></script>
+</body>
+
+</html>

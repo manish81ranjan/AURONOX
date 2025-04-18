@@ -1,0 +1,145 @@
+.banner-image {
+    background-image: url('banner\ 7.jpeg');
+    background-size: cover;     /* Make it cover the full div */
+    background-position: center; /* Center the focus */
+    width: 100%;
+    height: 300px;
+  }
+  
+.watches {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .watches h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #222;
+    font-weight: 700;
+  }
+  
+  .watch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .watch-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .watch-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .watch-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin: 0.5rem 0;
+  }
+  
+  .star-rating i {
+    color: #FFD700; /* gold color */
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+  }
+  
+  .star-rating i:hover {
+    transform: scale(1.2);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .star-rating i {
+      font-size: 1rem;
+    }
+  }
+  
+  .watch-info {
+    padding: 1rem;
+  }
+  
+  .watch-info h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .watch-info .price {
+    color: #1e88e5;
+    font-weight: 600;
+    margin: 0.3rem 0;
+  }
+  
+  .watch-info .desc {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+  }
+  
+  .shop-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .shop-btn:hover {
+    background-color: #444;
+  }
+  
+  .watch-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .watch-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .watch-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .watch-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .watch-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  

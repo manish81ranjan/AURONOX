@@ -1,0 +1,129 @@
+   * {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .login-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .login-container h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #007cba;
+    outline: none;
+  }
+
+  .form-group {
+    position: relative;
+  }
+
+  .form-group .toggle-password {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+  }
+
+  .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .remember-me input {
+    margin-right: 0.5rem;
+  }
+
+  button {
+    background-color: #007cba;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #005b9f;
+  }
+
+  .bottom-links {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .bottom-links a {
+    display: block;
+    margin-top: 0.5rem;
+    color: #007cba;
+    text-decoration: none;
+  }
+
+  .bottom-links a:hover {
+    text-decoration: underline;
+  }
+
+  .bottom-links1 {
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    align-items: end;
+    margin-left: 64px;
+    margin-top: -20px;
+  }
+  .bottom-links1 input {
+    margin-left: 0.5rem;
+  }
+
+  .bottom-links1 a {
+    display: flex;
+    margin-top: 0.5rem;
+    color: #007cba;
+    text-decoration: none;
+  }
+
+  .bottom-links1 a:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background-image: url(product\ 1.avif);
+    background-size: cover;
+    background-color: transparent;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+form.form {
+    width: 100%;
+    max-width: 600px;
+    /* background-color: #fff; */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid aliceblue;
+
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.container span {
+    color: #ffcc00;
+}
+
+.container p {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (min-width: 600px) {
+    .name {
+        flex-direction: row;
+    }
+}
+
+.name input {
+    flex: 1;
+}
+
+.container input,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: transparent;
+    transition: border-color 0.2s;
+    margin-bottom: 16px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.email,
+.message {
+    margin-bottom: 16px;
+}
+
+.submit button {
+    width: 100%;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit button:hover {
+    background-color: #000;
+    color: white;
+}
+input::placeholder,
+textarea::placeholder {
+  color: aliceblue;
+}

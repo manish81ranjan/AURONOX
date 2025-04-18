@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Brandstore</title>
+  <link rel="stylesheet" href="profile.css">
+
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login to AURONOX</h2>
+    <form class="login-form">
+      <label for="username">Username or Email Address</label>
+      <input type="text" id="username" placeholder="Enter your email or username" required>
+
+      <label for="password">Password</label>
+      <div class="form-group">
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <div class="remember-me">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember Me</label>
+        <div class="bottom-links1">
+        <a href="#">Forgot password</a>
+      </div>
+      </div>
+      
+
+      <button type="submit" onclick="handleLogin()">Log In</button>
+    </form>
+
+    <div class="bottom-links">
+      <a href="#">Dont have password?Sign up </a>
+      <a href="index.html">← Go to Brandstore</a>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+
+</html>
