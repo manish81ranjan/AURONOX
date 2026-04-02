@@ -1,0 +1,359 @@
+/* frontend/assets/css/shop.css */
+.shop-page{
+  padding-bottom: 40px;
+}
+
+.shop-hero{
+  padding: 54px 0 22px;
+}
+
+.shop-breadcrumb{
+  color: var(--gold);
+  letter-spacing: .08em;
+  margin-bottom: 14px;
+}
+
+.shop-title{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4.8rem;
+  line-height: .95;
+  margin-bottom: 10px;
+}
+
+.shop-subtitle{
+  max-width: 740px;
+  color: #d7c8b0;
+  line-height: 1.85;
+  font-size: 1.06rem;
+}
+
+.shop-section{
+  padding: 12px 0 30px;
+}
+
+.shop-layout{
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.shop-sidebar{
+  padding: 24px;
+  position: sticky;
+  top: 112px;
+}
+
+.shop-sidebar__block + .shop-sidebar__block{
+  margin-top: 24px;
+}
+
+.shop-label{
+  display: block;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .78rem;
+  margin-bottom: 14px;
+}
+
+.shop-chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chip{
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(214,169,74,.16);
+  background: rgba(255,255,255,.02);
+  color: #eee1cb;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.chip:hover{
+  border-color: rgba(214,169,74,.34);
+}
+
+.chip.active{
+  background: linear-gradient(180deg, #e3bc63, #c9982f);
+  color: #17130b;
+  font-weight: 700;
+  border-color: transparent;
+}
+
+.shop-select{
+  width: 100%;
+  height: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(214,169,74,.16);
+  background: rgba(255,255,255,.03);
+  color: #f5ebdc;
+  padding: 0 16px;
+  outline: none;
+}
+
+.shop-select option{
+  color: #111;
+}
+
+.series-list{
+  display: grid;
+  gap: 12px;
+}
+
+.series-item{
+  padding: 14px 16px;
+  border: 1px solid rgba(214,169,74,.12);
+  border-radius: 18px;
+  background: rgba(255,255,255,.02);
+}
+
+.series-item span{
+  display: block;
+  color: #b8a688;
+  font-size: .74rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  margin-bottom: 8px;
+}
+
+.series-item strong{
+  color: #f4ead9;
+  font-size: .98rem;
+}
+
+.shop-main{
+  min-width: 0;
+}
+
+.shop-topbar{
+  padding: 16px;
+  margin-bottom: 22px;
+}
+
+.shop-mobile-row{
+  display: none;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.shop-select--mobile{
+  display: none;
+}
+
+.product-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.product-card{
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(214,169,74,.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)),
+    linear-gradient(135deg, rgba(214,169,74,.06), transparent 30%, transparent 70%, rgba(214,169,74,.04));
+  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+  display: flex;
+  flex-direction: column;
+  transition: .3s ease;
+}
+
+.product-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(214,169,74,.28);
+}
+
+.product-card__media{
+  display: block;
+  aspect-ratio: 4 / 4.5;
+  background: #090909;
+  overflow: hidden;
+}
+
+.product-card__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.product-card:hover .product-card__media img{
+  transform: scale(1.04);
+}
+
+.product-card__content{
+  padding: 18px 18px 20px;
+}
+
+.product-card__series{
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .72rem;
+  margin-bottom: 10px;
+}
+
+.product-card__title{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 1.02;
+  margin-bottom: 10px;
+}
+
+.product-card__title a{
+  color: #f8f0e3;
+}
+
+.product-card__desc{
+  color: #d6c7b0;
+  line-height: 1.7;
+  min-height: 54px;
+  margin-bottom: 16px;
+}
+
+.product-card__footer{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.product-card__price{
+  color: #f4e1b7;
+  font-size: 1.3rem;
+}
+
+.product-card__actions{
+  display: flex;
+  gap: 10px;
+}
+
+.btn-outline{
+  min-width: 96px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(214,169,74,.18);
+  background: rgba(255,255,255,.03);
+  color: #f3eadb;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+}
+
+.shop-empty{
+  grid-column: 1 / -1;
+  padding: 60px 24px;
+  text-align: center;
+  border: 1px solid rgba(214,169,74,.14);
+  border-radius: 24px;
+  background: rgba(255,255,255,.02);
+}
+
+.shop-empty h3{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.shop-empty p{
+  color: #cdbda4;
+}
+
+@media (max-width: 1180px){
+  .product-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px){
+  .shop-layout{
+    grid-template-columns: 1fr;
+  }
+
+  .shop-sidebar{
+    position: static;
+  }
+
+  .shop-mobile-row{
+    display: flex;
+    margin-bottom: 12px;
+  }
+
+  .shop-select--mobile{
+    display: block;
+  }
+}
+
+@media (max-width: 700px){
+  .shop-title{
+    font-size: 3.5rem;
+  }
+
+  .product-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .product-card__footer{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-card__actions{
+    width: 100%;
+  }
+
+  .product-card__actions a,
+  .product-card__actions button{
+    flex: 1;
+  }
+}
+/* frontend/assets/css/shop.css */
+/* REPLACE ONLY THIS BLOCK */
+
+.product-card__footer{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.product-card__price{
+  color: #f4e1b7;
+  font-size: 1.3rem;
+  display: block;
+}
+
+.product-card__actions{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.product-card__actions .btn-outline,
+.product-card__actions .btn{
+  width: 100%;
+  min-width: 0;
+  height: 50px;
+  padding: 0 14px;
+  border-radius: 16px;
+  justify-content: center;
+}
+
+.product-card__actions .btn{
+  font-size: .95rem;
+}
+
+@media (max-width: 700px){
+  .product-card__actions{
+    grid-template-columns: 1fr 1fr;
+  }
+}
