@@ -1,0 +1,254 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heritage — AURONOX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div data-header-slot></div>
+  <main class="site-shell"><section class="container page-top">
+      <div class="breadcrumbs"><a href="../index.html">Home</a> / <span>Heritage</span></div>
+      <h1>Heritage</h1>
+      <p>Brand story page styled like a premium editorial spread.</p>
+    </section>
+    <section class="container heritage-hero panel luxury-outline">
+      <div class="heritage-copy">
+        <div class="mini-kicker">Since 1924</div>
+        <h2>Crafted with reverence for classic watchmaking.</h2>
+        <p>AURONOX combines archival influence, black-gold modern detailing, and a bold collector-focused presence.</p>
+      </div>
+    </section>
+    <section class="container editorial-grid-two">
+      <article class="editorial-card"><img src="../assets/images/home-collection-heritage.jpg" alt="Heritage"><div class="editorial-copy"><h3>Archival silhouettes</h3><p>Balanced proportions, warm reflections, and heritage-driven dials.</p></div></article>
+      <article class="editorial-card"><img src="../assets/images/featured-banner.jpg" alt="Craft"><div class="editorial-copy"><h3>Cinematic finishing</h3><p>Designed to feel premium across desktop and mobile, with layered dark surfaces and subtle gold highlights.</p></div></article>
+    </section>
+  </main>
+  <div data-footer-slot></div>
+  <script src="../assets/js/state/catalog.state.js"></script>
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/state/wishlist.state.js"></script>
+  <script src="../assets/js/utils/helpers.js"></script>
+  <script src="../assets/js/ui/layout.js"></script>
+  <script src="../assets/js/pages/home.js"></script>
+  <script src="../assets/js/pages/shop.js"></script>
+  <script src="../assets/js/pages/product.js"></script>
+  <script src="../assets/js/pages/cart.js"></script>
+  <script src="../assets/js/pages/checkout.js"></script>
+  <script src="../assets/js/pages/wishlist.js"></script>
+  <script src="../assets/js/pages/orders.js"></script>
+  <script src="../assets/js/pages/account.js"></script>
+</body>
+</html> -->
+
+<!-- frontend/pages/heritage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heritage — AURONOX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/heritage.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="header">
+      <div class="container nav">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-text">AURONOX</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./heritage.html" class="active">Heritage</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="./cart.html" class="nav-btn">Cart <span id="navCartCount">0</span></a>
+          <a href="./client-portal.html" class="nav-btn nav-btn--ghost">Account</a>
+
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="../index.html">Home</a>
+        <a href="./shop.html">Shop</a>
+        <a href="./wishlist.html">Wishlist</a>
+        <a href="./orders.html">Orders</a>
+        <a href="./heritage.html" class="active">Heritage</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./client-portal.html">Account</a>
+      </div>
+    </header>
+
+    <main class="heritage-page">
+      <section class="heritage-hero">
+        <div class="container">
+          <p class="heritage-breadcrumb">Home / Heritage</p>
+          <h1 class="heritage-title">Heritage</h1>
+          <p class="heritage-subtitle">
+            Brand story page styled like a premium editorial spread.
+          </p>
+        </div>
+      </section>
+
+      <section class="heritage-story">
+        <div class="container">
+          <div class="heritage-feature panel">
+            <div class="heritage-feature__copy">
+              <p class="section-kicker">Since 1924</p>
+              <h2>Crafted with reverence for classic watchmaking.</h2>
+              <p>
+                AURONOX combines archival influence, black-gold modern detailing,
+                and a bold collector-focused presence.
+              </p>
+              <div class="heritage-feature__actions">
+                <a href="./shop.html" class="btn btn-gold">Explore Collection</a>
+                <a href="./contact.html" class="btn btn-dark">Book Consultation</a>
+              </div>
+            </div>
+
+            <div class="heritage-feature__media">
+              <img src="../assets/images/heritage-main.jpg" alt="AURONOX Heritage" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="heritage-editorial">
+        <div class="container heritage-editorial__grid">
+          <article class="heritage-card panel">
+            <div class="heritage-card__media">
+              <img src="../assets/images/heritage-detail-1.jpg" alt="Archival silhouettes" />
+            </div>
+            <div class="heritage-card__content">
+              <p class="section-kicker">Design Language</p>
+              <h3>Archival silhouettes</h3>
+              <p>
+                Balanced proportions, warm reflections, and heritage-driven dials refined for a contemporary luxury identity.
+              </p>
+            </div>
+          </article>
+
+          <article class="heritage-card panel">
+            <div class="heritage-card__media">
+              <img src="../assets/images/heritage-detail-2.jpg" alt="Craftsmanship" />
+            </div>
+            <div class="heritage-card__content">
+              <p class="section-kicker">Craftsmanship</p>
+              <h3>Collector-level finishing</h3>
+              <p>
+                Every crown, case line, and dial marker is styled to feel rich, precise, and quietly commanding.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="heritage-values">
+        <div class="container">
+          <div class="section-head heritage-section-head">
+            <p class="section-kicker">AURONOX Values</p>
+            <h2>Built around collectors, not trends</h2>
+          </div>
+
+          <div class="heritage-values__grid">
+            <article class="value-card panel">
+              <span>01</span>
+              <h3>Timeless restraint</h3>
+              <p>Forms that remain elegant and strong across years, not seasons.</p>
+            </article>
+
+            <article class="value-card panel">
+              <span>02</span>
+              <h3>Material honesty</h3>
+              <p>Warm metal tones, dark surfaces, and balanced light interaction.</p>
+            </article>
+
+            <article class="value-card panel">
+              <span>03</span>
+              <h3>Private service</h3>
+              <p>Consultative ownership experience with premium aftercare and support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand footer-brand-link">
+            <span class="brand-mark"></span>
+            <span class="brand-text">AURONOX</span>
+          </a>
+          <p>
+            A luxury storefront system for premium watches, accessories, and collector-first experiences.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <a href="./shop.html?category=men">Men</a>
+          <a href="./shop.html?category=women">Women</a>
+          <a href="./shop.html?category=accessories">Accessories</a>
+          <a href="./heritage.html">Heritage</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../index.html">Home</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./client-portal.html">Account</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <a href="#">Private Consultations</a>
+          <a href="#">Warranty Support</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">Care Guide</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 AURONOX. All rights reserved.</p>
+        <div class="footer-bottom__links">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">YouTube</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/pages/heritage.js"></script>
+</body>
+</html>

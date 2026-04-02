@@ -1,0 +1,202 @@
+<!-- frontend/pages/contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — AURONOX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/contact.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="header">
+      <div class="container nav">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-text">AURONOX</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./heritage.html">Heritage</a>
+          <a href="./contact.html" class="active">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="./cart.html" class="nav-btn">Cart <span id="navCartCount">0</span></a>
+          <a href="./client-portal.html" class="nav-btn nav-btn--ghost">Account</a>
+
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="../index.html">Home</a>
+        <a href="./shop.html">Shop</a>
+        <a href="./wishlist.html">Wishlist</a>
+        <a href="./orders.html">Orders</a>
+        <a href="./heritage.html">Heritage</a>
+        <a href="./contact.html" class="active">Contact</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./client-portal.html">Account</a>
+      </div>
+    </header>
+
+    <main class="contact-page">
+      <section class="contact-hero">
+        <div class="container">
+          <p class="contact-breadcrumb">Home / Contact</p>
+          <h1 class="contact-title">Contact</h1>
+          <p class="contact-subtitle">
+            Boutique inquiry form with luxury styling, concierge details, and premium assistance.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container contact-layout">
+          <div class="contact-form-wrap panel">
+            <p class="section-kicker">Contact Us</p>
+            <h2 class="contact-form-title">Schedule a private consultation.</h2>
+            <p class="contact-form-subtitle">
+              Speak with the AURONOX boutique team for private viewing requests, custom inquiries, and collector support.
+            </p>
+
+            <div class="contact-message" id="contactMessage"></div>
+
+            <form id="contactForm" class="contact-form">
+              <div class="contact-grid">
+                <div class="field">
+                  <label for="contactName">Name</label>
+                  <input id="contactName" name="name" type="text" placeholder="Your name" required />
+                </div>
+
+                <div class="field">
+                  <label for="contactEmail">Email Address</label>
+                  <input id="contactEmail" name="email" type="email" placeholder="you@example.com" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="contactSubject">Subject</label>
+                <input id="contactSubject" name="subject" type="text" placeholder="Private viewing / custom order / support" required />
+              </div>
+
+              <div class="field">
+                <label for="contactMessageField">Message</label>
+                <textarea id="contactMessageField" name="message" rows="6" placeholder="Tell us what you need..." required></textarea>
+              </div>
+
+              <button class="btn btn-gold contact-submit" type="submit">Send Message</button>
+            </form>
+          </div>
+
+          <aside class="contact-side">
+            <article class="contact-card panel">
+              <div class="contact-card__media">
+                <img src="../assets/images/contact-boutique.jpg" alt="AURONOX Boutique" />
+              </div>
+              <div class="contact-card__content">
+                <p class="section-kicker">Boutique</p>
+                <h3>AURONOX Private Salon</h3>
+                <p>Luxury appointments, heritage collections, and one-to-one consultations for collectors.</p>
+              </div>
+            </article>
+
+            <article class="contact-info panel">
+              <p class="section-kicker">Client Services</p>
+              <h3>How we help</h3>
+
+              <div class="contact-info__list">
+                <div class="contact-info__row">
+                  <span>Email</span>
+                  <strong>concierge@auronox.com</strong>
+                </div>
+                <div class="contact-info__row">
+                  <span>Support</span>
+                  <strong>24 / 7 private care</strong>
+                </div>
+                <div class="contact-info__row">
+                  <span>Appointments</span>
+                  <strong>By request only</strong>
+                </div>
+                <div class="contact-info__row">
+                  <span>Warranty</span>
+                  <strong>Global assistance</strong>
+                </div>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand footer-brand-link">
+            <span class="brand-mark"></span>
+            <span class="brand-text">AURONOX</span>
+          </a>
+          <p>
+            A luxury storefront system for premium watches, accessories, and collector-first experiences.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <a href="./shop.html?category=men">Men</a>
+          <a href="./shop.html?category=women">Women</a>
+          <a href="./shop.html?category=accessories">Accessories</a>
+          <a href="./heritage.html">Heritage</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../index.html">Home</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./client-portal.html">Account</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <a href="#">Private Consultations</a>
+          <a href="#">Warranty Support</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">Care Guide</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 AURONOX. All rights reserved.</p>
+        <div class="footer-bottom__links">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">YouTube</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/pages/contact.js"></script>
+</body>
+</html>

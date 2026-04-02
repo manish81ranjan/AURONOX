@@ -1,0 +1,221 @@
+<!-- frontend/pages/product.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — AURONOX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/product.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="header">
+      <div class="container nav">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-text">AURONOX</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./shop.html" class="active">Shop</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./heritage.html">Heritage</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="./cart.html" class="nav-btn">Cart <span id="navCartCount">0</span></a>
+          <a href="./client-portal.html" class="nav-btn nav-btn--ghost">Account</a>
+
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="../index.html">Home</a>
+        <a href="./shop.html" class="active">Shop</a>
+        <a href="./wishlist.html">Wishlist</a>
+        <a href="./orders.html">Orders</a>
+        <a href="./heritage.html">Heritage</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./client-portal.html">Account</a>
+      </div>
+    </header>
+
+    <main class="product-page">
+      <section class="product-hero">
+        <div class="container">
+          <p class="product-breadcrumb" id="productBreadcrumb">Home / Shop / Product</p>
+          <h1 class="product-page-title">Product</h1>
+          <p class="product-page-subtitle">
+            Refined product presentation with gallery, material notes, premium actions, and related pieces.
+          </p>
+        </div>
+      </section>
+
+      <section class="product-section">
+        <div class="container product-layout">
+          <div class="product-gallery panel">
+            <div class="product-gallery__thumbs" id="productThumbs"></div>
+
+            <div class="product-gallery__main">
+              <img id="productMainImage" src="" alt="" />
+            </div>
+          </div>
+
+          <div class="product-summary panel">
+            <p class="product-series" id="productSeries">Series</p>
+
+            <div class="product-summary__head">
+              <h2 class="product-title" id="productTitle">AURONOX Product</h2>
+              <strong class="product-price" id="productPrice">₹ 0</strong>
+            </div>
+
+            <p class="product-description" id="productDescription"></p>
+
+            <div class="product-highlights">
+              <div class="highlight-pill">Premium Finish</div>
+              <div class="highlight-pill">Collector Series</div>
+              <div class="highlight-pill">Luxury Presentation</div>
+            </div>
+
+            <div class="product-actions">
+              <button class="btn btn-gold" type="button" id="addToCartBtn">Add to Cart</button>
+              <button class="btn btn-dark" type="button" id="buyNowBtn">Buy Now</button>
+              <button class="btn btn-dark" type="button" id="wishlistBtn">Wishlist</button>
+            </div>
+
+            <a href="./shop.html" class="product-back">Back to Shop</a>
+
+            <div class="product-specs">
+              <article class="spec-card">
+                <span>Movement</span>
+                <strong id="productMovement">—</strong>
+              </article>
+              <article class="spec-card">
+                <span>Case</span>
+                <strong id="productCase">—</strong>
+              </article>
+              <article class="spec-card">
+                <span>Dial</span>
+                <strong id="productDial">—</strong>
+              </article>
+              <article class="spec-card">
+                <span>Warranty</span>
+                <strong id="productWarranty">—</strong>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-editorial">
+        <div class="container product-editorial__grid">
+          <article class="editorial-card panel">
+            <p class="section-kicker">Design Direction</p>
+            <h3>Balanced proportions with a luxury-first visual language.</h3>
+            <p>
+              Sculpted forms, polished surfaces, and quiet detailing shape the AURONOX identity.
+            </p>
+          </article>
+
+          <article class="editorial-card panel">
+            <p class="section-kicker">Ownership</p>
+            <h3>Built for clients who expect premium presentation and aftercare.</h3>
+            <p>
+              White-glove support, elegant packaging, and boutique-level service complete the experience.
+            </p>
+          </article>
+
+          <article class="editorial-card panel">
+            <p class="section-kicker">Collector Notes</p>
+            <h3>Strong presence without excess, designed for timeless appeal.</h3>
+            <p>
+              Every component is presented with clarity to feel elevated across desktop and mobile.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="related-products">
+        <div class="container">
+          <div class="section-head product-section-head">
+            <p class="section-kicker">You May Also Like</p>
+            <h2>More from the collection</h2>
+          </div>
+
+          <div class="related-grid" id="relatedGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand footer-brand-link">
+            <span class="brand-mark"></span>
+            <span class="brand-text">AURONOX</span>
+          </a>
+          <p>
+            A luxury storefront system for premium watches, accessories, and collector-first experiences.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <a href="./shop.html?category=men">Men</a>
+          <a href="./shop.html?category=women">Women</a>
+          <a href="./shop.html?category=accessories">Accessories</a>
+          <a href="./heritage.html">Heritage</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../index.html">Home</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./client-portal.html">Account</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <a href="#">Private Consultations</a>
+          <a href="#">Warranty Support</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">Care Guide</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 AURONOX. All rights reserved.</p>
+        <div class="footer-bottom__links">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">YouTube</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/state/catalog.state.js"></script>
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/state/wishlist.state.js"></script>
+  <script src="../assets/js/ui/product-card.js"></script>
+  <script src="../assets/js/pages/product.js"></script>
+</body>
+</html>

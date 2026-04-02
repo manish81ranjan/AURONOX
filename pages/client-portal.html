@@ -1,0 +1,270 @@
+<!-- frontend/pages/client-portal.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Portal — AURONOX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/client-portal.css" />
+</head>
+
+<body>
+  <div class="site-shell">
+    <header class="header">
+      <div class="container nav">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-text">AURONOX</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./heritage.html">Heritage</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="./cart.html" class="nav-btn">Cart <span id="navCartCount">0</span></a>
+          <a href="./client-portal.html" class="nav-btn nav-btn--ghost">Account</a>
+
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="../index.html">Home</a>
+        <a href="./shop.html">Shop</a>
+        <a href="./wishlist.html">Wishlist</a>
+        <a href="./orders.html">Orders</a>
+        <a href="./heritage.html">Heritage</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./client-portal.html" class="active">Account</a>
+      </div>
+    </header>
+
+    <main class="portal-page">
+      <section class="portal-hero">
+        <div class="container">
+          <p class="portal-kicker">Client Services</p>
+          <h1 class="portal-title">Private account access for collectors.</h1>
+          <p class="portal-subtitle">
+            Sign in to manage saved items, orders, delivery updates, and premium service requests.
+          </p>
+        </div>
+      </section>
+
+      <section class="portal-section">
+        <div class="container portal-grid">
+          <div class="portal-auth panel" id="authPanel">
+            <div class="portal-tabs">
+              <button class="portal-tab active" data-tab="login" type="button">Login</button>
+              <button class="portal-tab" data-tab="register" type="button">Register</button>
+            </div>
+
+            <div class="portal-message" id="portalMessage"></div>
+
+            <form class="portal-form active" id="loginForm">
+              <div class="field">
+                <label for="loginEmail">Email Address</label>
+                <input id="loginEmail" name="email" type="email" placeholder="client@auronox.com" required />
+              </div>
+
+              <div class="field">
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" name="password" type="password" placeholder="Enter your password" required />
+              </div>
+
+              <button class="btn btn-gold portal-submit" type="submit">Sign In</button>
+            </form>
+
+            <form class="portal-form" id="registerForm">
+              <div class="field">
+                <label for="registerName">Full Name</label>
+                <input id="registerName" name="name" type="text" placeholder="AURONOX Client" required />
+              </div>
+
+              <div class="field">
+                <label for="registerEmail">Email Address</label>
+                <input id="registerEmail" name="email" type="email" placeholder="client@auronox.com" required />
+              </div>
+
+              <div class="field">
+                <label for="registerPassword">Password</label>
+                <input id="registerPassword" name="password" type="password" placeholder="Create a password" required />
+              </div>
+
+              <button class="btn btn-gold portal-submit" type="submit">Create Account</button>
+            </form>
+
+            <div class="portal-benefits">
+              <div class="benefit-card">
+                <span>Priority Access</span>
+                <strong>Early edition drops</strong>
+              </div>
+              <div class="benefit-card">
+                <span>Client Care</span>
+                <strong>White-glove support</strong>
+              </div>
+              <div class="benefit-card">
+                <span>Coverage</span>
+                <strong>Global warranty tracking</strong>
+              </div>
+            </div>
+          </div>
+
+          <aside class="portal-aside panel">
+            <!-- OPTIONAL: if you want direct image tag instead of CSS background, replace portal-aside__media block with this -->
+
+            <div class="portal-aside__media portal-aside__media--image">
+              <img src="../assets/watches/AURONOX7.jpg" alt="AURONOX Watch" class="portal-watch-image" />
+              <!-- <span class="portal-image-tag">Replace with your watch image</span> -->
+            </div>
+            <div class="portal-aside__content">
+              <p class="section-kicker">AURONOX Service Circle</p>
+              <h2>Designed for owners, collectors, and private consultations.</h2>
+              <ul class="portal-points">
+                <li>Order history and concierge support</li>
+                <li>Saved wishlist across premium collections</li>
+                <li>Fast service requests and warranty care</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="portal-dashboard-wrap">
+        <div class="container">
+          <div class="portal-dashboard panel hidden" id="dashboardPanel">
+            <div class="dashboard-head">
+              <div>
+                <p class="section-kicker">Client Dashboard</p>
+                <h2 id="clientName">AURONOX Client</h2>
+                <p class="dashboard-email" id="clientEmail">client@auronox.com</p>
+              </div>
+              <button class="btn btn-dark" id="logoutBtn" type="button">Logout</button>
+            </div>
+
+            <div class="dashboard-stats">
+              <div class="dashboard-stat">
+                <span>Wishlist</span>
+                <strong id="wishlistCount">0</strong>
+              </div>
+              <div class="dashboard-stat">
+                <span>Cart Items</span>
+                <strong id="cartCount">0</strong>
+              </div>
+              <div class="dashboard-stat">
+                <span>Status</span>
+                <strong>Premium Member</strong>
+              </div>
+            </div>
+
+            <div class="dashboard-grid">
+              <article class="dashboard-card">
+                <p class="section-kicker">Profile</p>
+                <h3>Client Details</h3>
+                <div class="dashboard-list">
+                  <div><span>Name</span><strong id="profileName">—</strong></div>
+                  <div><span>Email</span><strong id="profileEmail">—</strong></div>
+                  <div><span>Member Since</span><strong id="profileSince">—</strong></div>
+                </div>
+              </article>
+
+              <article class="dashboard-card">
+                <p class="section-kicker">Service</p>
+                <h3>Member Benefits</h3>
+                <div class="dashboard-list">
+                  <div><span>Warranty</span><strong>5 years</strong></div>
+                  <div><span>Support</span><strong>Priority care</strong></div>
+                  <div><span>Access</span><strong>Private drops</strong></div>
+                </div>
+              </article>
+
+              <article class="dashboard-card dashboard-card--wide">
+                <p class="section-kicker">Collector Notes</p>
+                <h3>Your account is active and ready.</h3>
+                <p class="dashboard-text">
+                  Continue to wishlist, orders, or contact the boutique team for a private consultation.
+                </p>
+                <div class="dashboard-actions">
+                  <a href="./wishlist.html" class="btn btn-dark">Wishlist</a>
+                  <a href="./orders.html" class="btn btn-dark">Orders</a>
+                  <a href="./contact.html" class="btn btn-gold">Concierge</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand footer-brand-link">
+            <span class="brand-mark"></span>
+            <span class="brand-text">AURONOX</span>
+          </a>
+          <p>
+            A luxury storefront system for premium watches, accessories, and collector-first experiences.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <a href="./shop.html?category=men">Men</a>
+          <a href="./shop.html?category=women">Women</a>
+          <a href="./shop.html?category=accessories">Accessories</a>
+          <a href="./heritage.html">Heritage</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../index.html">Home</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./client-portal.html">Account</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <a href="#">Private Consultations</a>
+          <a href="#">Warranty Support</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">Care Guide</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 AURONOX. All rights reserved.</p>
+        <div class="footer-bottom__links">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">YouTube</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/pages/client-portal.js"></script>
+</body>
+
+</html>

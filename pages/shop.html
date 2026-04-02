@@ -1,0 +1,246 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — AURONOX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div data-header-slot></div>
+  <main class="site-shell"><section class="container page-top">
+      <div class="breadcrumbs"><a href="../index.html">Home</a> / <span>Shop</span></div>
+      <h1>Shop</h1>
+      <p>Luxury grid with category tabs, sorting, and premium product cards.</p>
+    </section>
+    <section class="container shop-layout">
+      <aside class="filter-panel panel luxury-outline">
+        <h3>Refine</h3>
+        <div class="filter-group">
+          <label>Collection</label>
+          <div class="tab-stack">
+            <button class="chip active" data-category="all">All</button>
+            <button class="chip" data-category="men">Men</button>
+            <button class="chip" data-category="women">Women</button>
+            <button class="chip" data-category="accessories">Accessories</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>Sort</label>
+          <select data-sort>
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Series</label>
+          <div class="info-list-simple" data-series-list></div>
+        </div>
+      </aside>
+      <section>
+        <div class="mobile-filter-row">
+          <div class="tab-stack horizontal-scroll" data-mobile-tabs></div>
+          <select data-sort-mobile>
+            <option value="featured">Featured</option>
+            <option value="price-asc">Low to High</option>
+            <option value="price-desc">High to Low</option>
+          </select>
+        </div>
+        <div class="shop-grid" data-shop-grid></div>
+      </section>
+    </section>
+  </main>
+  <div data-footer-slot></div>
+  <script src="../assets/js/state/catalog.state.js"></script>
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/state/wishlist.state.js"></script>
+  <script src="../assets/js/utils/helpers.js"></script>
+  <script src="../assets/js/ui/layout.js"></script>
+  <script src="../assets/js/pages/home.js"></script>
+  <script src="../assets/js/pages/shop.js"></script>
+  <script src="../assets/js/pages/product.js"></script>
+  <script src="../assets/js/pages/cart.js"></script>
+  <script src="../assets/js/pages/checkout.js"></script>
+  <script src="../assets/js/pages/wishlist.js"></script>
+  <script src="../assets/js/pages/orders.js"></script>
+  <script src="../assets/js/pages/account.js"></script>
+</body>
+</html> -->
+
+<!-- frontend/pages/shop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — AURONOX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/shop.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="header">
+      <div class="container nav">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-text">AURONOX</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./shop.html" class="active">Shop</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./heritage.html">Heritage</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="./cart.html" class="nav-btn">Cart <span id="navCartCount">0</span></a>
+          <a href="./client-portal.html" class="nav-btn nav-btn--ghost">Account</a>
+
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="../index.html">Home</a>
+        <a href="./shop.html" class="active">Shop</a>
+        <a href="./wishlist.html">Wishlist</a>
+        <a href="./orders.html">Orders</a>
+        <a href="./heritage.html">Heritage</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./client-portal.html">Account</a>
+      </div>
+    </header>
+
+    <main class="shop-page">
+      <section class="shop-hero">
+        <div class="container">
+          <p class="shop-breadcrumb">Home / Shop</p>
+          <h1 class="shop-title">Shop</h1>
+          <p class="shop-subtitle">
+            Luxury grid with category tabs, refined filtering, and premium product cards.
+          </p>
+        </div>
+      </section>
+
+      <section class="shop-section">
+        <div class="container shop-layout">
+          <aside class="shop-sidebar panel">
+            <div class="shop-sidebar__block">
+              <p class="shop-label">Collection</p>
+              <div class="shop-chips">
+                <button class="chip active" data-category="all" type="button">All</button>
+                <button class="chip" data-category="men" type="button">Men</button>
+                <button class="chip" data-category="women" type="button">Women</button>
+                <button class="chip" data-category="accessories" type="button">Accessories</button>
+              </div>
+            </div>
+
+            <div class="shop-sidebar__block">
+              <label class="shop-label" for="sortSelect">Sort</label>
+              <select id="sortSelect" class="shop-select" data-sort>
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+              </select>
+            </div>
+
+            <div class="shop-sidebar__block">
+              <p class="shop-label">Series</p>
+              <div class="series-list" data-series-list></div>
+            </div>
+          </aside>
+
+          <div class="shop-main">
+            <div class="shop-topbar panel">
+              <div class="shop-mobile-row" data-mobile-tabs></div>
+              <select class="shop-select shop-select--mobile" data-sort-mobile>
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+              </select>
+            </div>
+
+            <section class="product-grid" data-shop-grid></section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand footer-brand-link">
+            <span class="brand-mark"></span>
+            <span class="brand-text">AURONOX</span>
+          </a>
+          <p>
+            A luxury storefront system for premium watches, accessories, and collector-first experiences.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <a href="./shop.html?category=men">Men</a>
+          <a href="./shop.html?category=women">Women</a>
+          <a href="./shop.html?category=accessories">Accessories</a>
+          <a href="./heritage.html">Heritage</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../index.html">Home</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./client-portal.html">Account</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <a href="#">Private Consultations</a>
+          <a href="#">Warranty Support</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">Care Guide</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 AURONOX. All rights reserved.</p>
+        <div class="footer-bottom__links">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">YouTube</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/state/catalog.state.js"></script>
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/state/wishlist.state.js"></script>
+  <script src="../assets/js/ui/product-card.js"></script>
+  <script src="../assets/js/pages/shop.js"></script>
+</body>
+</html>

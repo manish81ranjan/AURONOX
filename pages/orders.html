@@ -1,0 +1,221 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orders — AURONOX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div data-header-slot></div>
+  <main class="site-shell"><section class="container page-top">
+      <div class="breadcrumbs"><a href="../index.html">Home</a> / <span>Orders</span></div>
+      <h1>Orders</h1>
+      <p>Elegant order history table with progress styling and premium summary cards.</p>
+    </section>
+    <section class="container orders-layout">
+      <div class="panel luxury-outline order-list" data-orders-list></div>
+      <aside class="panel luxury-outline order-side">
+        <h3>Order Notes</h3>
+        <div class="info-list-simple">
+          <div><span>Shipping</span><strong>White-glove delivery</strong></div>
+          <div><span>Support</span><strong>24/7 concierge</strong></div>
+          <div><span>Warranty</span><strong>Global registration</strong></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <div data-footer-slot></div>
+  <script src="../assets/js/state/catalog.state.js"></script>
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/state/wishlist.state.js"></script>
+  <script src="../assets/js/utils/helpers.js"></script>
+  <script src="../assets/js/ui/layout.js"></script>
+  <script src="../assets/js/pages/home.js"></script>
+  <script src="../assets/js/pages/shop.js"></script>
+  <script src="../assets/js/pages/product.js"></script>
+  <script src="../assets/js/pages/cart.js"></script>
+  <script src="../assets/js/pages/checkout.js"></script>
+  <script src="../assets/js/pages/wishlist.js"></script>
+  <script src="../assets/js/pages/orders.js"></script>
+  <script src="../assets/js/pages/account.js"></script>
+</body>
+</html> -->
+
+<!-- frontend/pages/orders.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orders — AURONOX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/orders.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="header">
+      <div class="container nav">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-text">AURONOX</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="./orders.html" class="active">Orders</a>
+          <a href="./heritage.html">Heritage</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="./cart.html" class="nav-btn">Cart <span id="navCartCount">0</span></a>
+          <a href="./client-portal.html" class="nav-btn nav-btn--ghost">Account</a>
+
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="../index.html">Home</a>
+        <a href="./shop.html">Shop</a>
+        <a href="./wishlist.html">Wishlist</a>
+        <a href="./orders.html" class="active">Orders</a>
+        <a href="./heritage.html">Heritage</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./client-portal.html">Account</a>
+      </div>
+    </header>
+
+    <main class="orders-page">
+      <section class="orders-hero">
+        <div class="container">
+          <p class="orders-breadcrumb">Home / Orders</p>
+          <h1 class="orders-title">Orders</h1>
+          <p class="orders-subtitle">
+            Elegant order history table with progress styling and premium summary cards.
+          </p>
+        </div>
+      </section>
+
+      <section class="orders-section">
+        <div class="container orders-layout">
+          <div class="orders-main">
+            <div class="orders-table-wrap panel">
+              <div class="orders-table-head">
+                <div>
+                  <p class="section-kicker">Order History</p>
+                  <h2 class="orders-table-title">Recent purchases</h2>
+                </div>
+                <a href="./shop.html" class="btn btn-dark">Continue Shopping</a>
+              </div>
+
+              <div class="orders-table" id="ordersTable"></div>
+            </div>
+          </div>
+
+          <aside class="orders-side">
+            <article class="orders-summary panel">
+              <p class="section-kicker">Overview</p>
+              <h2 class="orders-summary__title">Order Notes</h2>
+
+              <div class="orders-summary__list">
+                <div class="orders-summary__row">
+                  <span>Shipping</span>
+                  <strong>White-glove delivery</strong>
+                </div>
+                <div class="orders-summary__row">
+                  <span>Support</span>
+                  <strong>24 / 7 concierge</strong>
+                </div>
+                <div class="orders-summary__row">
+                  <span>Warranty</span>
+                  <strong>Global registration</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="orders-summary panel">
+              <p class="section-kicker">Client Care</p>
+              <h2 class="orders-summary__title">Need assistance?</h2>
+              <p class="orders-help-text">
+                For boutique updates, delivery changes, or collector support, contact the AURONOX concierge team.
+              </p>
+              <a href="./contact.html" class="btn btn-gold">Contact Concierge</a>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand footer-brand-link">
+            <span class="brand-mark"></span>
+            <span class="brand-text">AURONOX</span>
+          </a>
+          <p>
+            A luxury storefront system for premium watches, accessories, and collector-first experiences.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <a href="./shop.html?category=men">Men</a>
+          <a href="./shop.html?category=women">Women</a>
+          <a href="./shop.html?category=accessories">Accessories</a>
+          <a href="./heritage.html">Heritage</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../index.html">Home</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./client-portal.html">Account</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <a href="#">Private Consultations</a>
+          <a href="#">Warranty Support</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">Care Guide</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 AURONOX. All rights reserved.</p>
+        <div class="footer-bottom__links">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">YouTube</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/pages/orders.js"></script>
+</body>
+</html>

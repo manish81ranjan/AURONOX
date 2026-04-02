@@ -1,0 +1,181 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist — AURONOX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div data-header-slot></div>
+  <main class="site-shell"><section class="container page-top">
+      <div class="breadcrumbs"><a href="../index.html">Home</a> / <span>Wishlist</span></div>
+      <h1>Wishlist</h1>
+      <p>Saved timepieces and accessories in the same premium visual language.</p>
+    </section><section class="container"><div class="shop-grid" data-wishlist-grid></div></section>
+  </main>
+  <div data-footer-slot></div>
+  <script src="../assets/js/state/catalog.state.js"></script>
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/state/wishlist.state.js"></script>
+  <script src="../assets/js/utils/helpers.js"></script>
+  <script src="../assets/js/ui/layout.js"></script>
+  <script src="../assets/js/pages/home.js"></script>
+  <script src="../assets/js/pages/shop.js"></script>
+  <script src="../assets/js/pages/product.js"></script>
+  <script src="../assets/js/pages/cart.js"></script>
+  <script src="../assets/js/pages/checkout.js"></script>
+  <script src="../assets/js/pages/wishlist.js"></script>
+  <script src="../assets/js/pages/orders.js"></script>
+  <script src="../assets/js/pages/account.js"></script>
+</body>
+</html> -->
+
+<!-- frontend/pages/wishlist.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist — AURONOX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/wishlist.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="header">
+      <div class="container nav">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-text">AURONOX</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./shop.html">Shop</a>
+          <a href="./wishlist.html" class="active">Wishlist</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./heritage.html">Heritage</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="./cart.html" class="nav-btn">Cart <span id="navCartCount">0</span></a>
+          <a href="./client-portal.html" class="nav-btn nav-btn--ghost">Account</a>
+
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="../index.html">Home</a>
+        <a href="./shop.html">Shop</a>
+        <a href="./wishlist.html" class="active">Wishlist</a>
+        <a href="./orders.html">Orders</a>
+        <a href="./heritage.html">Heritage</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./client-portal.html">Account</a>
+      </div>
+    </header>
+
+    <main class="wishlist-page">
+      <section class="wishlist-hero">
+        <div class="container">
+          <p class="wishlist-breadcrumb">Home / Wishlist</p>
+          <h1 class="wishlist-title">Wishlist</h1>
+          <p class="wishlist-subtitle">
+            Saved timepieces and accessories in the same premium visual language.
+          </p>
+        </div>
+      </section>
+
+      <section class="wishlist-section">
+        <div class="container">
+          <div class="wishlist-toolbar panel">
+            <div>
+              <p class="section-kicker">Saved Selection</p>
+              <h2 class="wishlist-toolbar__title">Your curated shortlist</h2>
+            </div>
+
+            <div class="wishlist-toolbar__actions">
+              <button class="btn btn-dark" type="button" id="clearWishlistBtn">Clear Wishlist</button>
+              <a href="./shop.html" class="btn btn-gold">Continue Shopping</a>
+            </div>
+          </div>
+
+          <div class="wishlist-grid" id="wishlistGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand footer-brand-link">
+            <span class="brand-mark"></span>
+            <span class="brand-text">AURONOX</span>
+          </a>
+          <p>
+            A luxury storefront system for premium watches, accessories, and collector-first experiences.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <a href="./shop.html?category=men">Men</a>
+          <a href="./shop.html?category=women">Women</a>
+          <a href="./shop.html?category=accessories">Accessories</a>
+          <a href="./heritage.html">Heritage</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="../index.html">Home</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./orders.html">Orders</a>
+          <a href="./client-portal.html">Account</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <a href="#">Private Consultations</a>
+          <a href="#">Warranty Support</a>
+          <a href="#">Shipping & Returns</a>
+          <a href="#">Care Guide</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 AURONOX. All rights reserved.</p>
+        <div class="footer-bottom__links">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">YouTube</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/state/catalog.state.js"></script>
+  <script src="../assets/js/state/cart.state.js"></script>
+  <script src="../assets/js/state/wishlist.state.js"></script>
+  <script src="../assets/js/pages/wishlist.js"></script>
+</body>
+</html>
