@@ -25,15 +25,15 @@
 
         <nav class="nav-links">
           <a href="./index.html" class="active">Home</a>
-          <a href="./pages/shop.html">Shop</a>
-          <a href="./pages/wishlist.html">Wishlist</a>
-          <a href="./pages/orders.html">Orders</a>
+          <a href="./pages/shop.html" class="require-auth">Shop</a>
+          <a href="./pages/wishlist.html" class="require-auth">Wishlist</a>
+          <a href="./pages/orders.html" class="require-auth">Orders</a>
           <a href="./pages/heritage.html">Heritage</a>
           <a href="./pages/contact.html">Contact</a>
         </nav>
 
         <div class="nav-actions">
-          <a href="./pages/cart.html" class="nav-btn">Cart <span id="navCartCount">0</span></a>
+          <a href="./pages/cart.html" class="nav-btn require-auth">Cart <span id="navCartCount">0</span></a>
           <a href="./pages/client-portal.html" class="nav-btn nav-btn--ghost">Account</a>
 
           <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
@@ -46,12 +46,12 @@
 
       <div class="mobile-drawer" id="mobileDrawer">
         <a href="./index.html" class="active">Home</a>
-        <a href="./pages/shop.html">Shop</a>
-        <a href="./pages/wishlist.html">Wishlist</a>
-        <a href="./pages/orders.html">Orders</a>
+        <a href="./pages/shop.html" class="require-auth">Shop</a>
+        <a href="./pages/wishlist.html" class="require-auth">Wishlist</a>
+        <a href="./pages/orders.html" class="require-auth">Orders</a>
         <a href="./pages/heritage.html">Heritage</a>
         <a href="./pages/contact.html">Contact</a>
-        <a href="./pages/cart.html">Cart</a>
+        <a href="./pages/cart.html" class="require-auth">Cart</a>
         <a href="./pages/client-portal.html">Account</a>
       </div>
     </header>
@@ -69,7 +69,7 @@
               </p>
 
               <div class="hero-actions">
-                <a href="./pages/shop.html" class="btn btn-gold">Explore Collection</a>
+                <a href="./pages/shop.html" class="btn btn-gold require-auth">Explore Collection</a>
                 <a href="./pages/heritage.html" class="btn btn-dark">Heritage</a>
               </div>
 
@@ -91,36 +91,32 @@
           </article>
 
           <div class="hero-side">
-            
-  <article class="feature-card panel">
-    <div class="feature-art">
-      <video class="media-fill" autoplay muted loop playsinline>
-        <source src="./assets/images/video.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="feature-copy">
-      <p class="section-kicker">Signature Finishing</p>
-      <h3>Sapphire crystal, sculpted case, collector-grade detailing.</h3>
-    </div>
-  </article>
+            <article class="feature-card panel">
+              <div class="feature-art">
+                <video class="media-fill" autoplay muted loop playsinline>
+                  <source src="./assets/images/video.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="feature-copy">
+                <p class="section-kicker">Signature Finishing</p>
+                <h3>Sapphire crystal, sculpted case, collector-grade detailing.</h3>
+              </div>
+            </article>
 
-  <article class="feature-card panel">
-    <div class="feature-art">
-      <video class="media-fill" autoplay muted loop playsinline>
-        <source src="main video.mp4" type="video/mp4" />
-      </video>
-      <!-- <video class="media-mobile" autoplay muted loop playsinline>
-    <source src="main video.mp4" type="video/mp4" />
-  </video> -->
-    </div>
-    <div class="feature-copy">
-      <p class="section-kicker">Vault Editions</p>
-      <h3>Limited drops with rare materials and bold chronograph presence.</h3>
-    </div>
-  </article>
-</div>
+            <article class="feature-card panel">
+              <div class="feature-art">
+                <video class="media-fill" autoplay muted loop playsinline>
+                  <source src="./main video.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="feature-copy">
+                <p class="section-kicker">Vault Editions</p>
+                <h3>Limited drops with rare materials and bold chronograph presence.</h3>
+              </div>
+            </article>
+          </div>
         </div>
-      
+      </section>
 
       <section class="marquee">
         <div class="container">
@@ -140,7 +136,7 @@
           </div>
 
           <div class="collection-grid">
-            <a class="collection-card" href="./pages/shop.html?category=men">
+            <a class="collection-card require-auth" href="./pages/shop.html?category=men">
               <img src="./assets/watches/AURONOX7.jpg" alt="Men Collection" class="collection-image" />
               <div class="collection-overlay"></div>
               <div class="collection-content">
@@ -150,8 +146,8 @@
               </div>
             </a>
 
-            <a class="collection-card" href="./pages/shop.html?category=women">
-              <img src="./assets/images/video.mp4" alt="Women Collection" class="collection-image" />
+            <a class="collection-card require-auth" href="./pages/shop.html?category=women">
+              <img src="./assets/watches/AURONOX20.jpg" alt="Men Collection" class="collection-image" />
               <div class="collection-overlay"></div>
               <div class="collection-content">
                 <p>Women</p>
@@ -160,7 +156,7 @@
               </div>
             </a>
 
-            <a class="collection-card" href="./pages/shop.html?category=accessories">
+            <a class="collection-card require-auth" href="./pages/shop.html?category=accessories">
               <img src="./assets/watches/AURONOX11.jpg" alt="Accessories Collection" class="collection-image" />
               <div class="collection-overlay"></div>
               <div class="collection-content">
@@ -182,7 +178,7 @@
               A modern silhouette with deep dial architecture, polished case geometry,
               and warm gold reflections across every surface.
             </p>
-            <a href="./pages/shop.html" class="btn btn-gold">Reserve Yours</a>
+            <a href="./pages/shop.html" class="btn btn-gold require-auth">Reserve Yours</a>
           </div>
 
           <div class="spotlight-art">
@@ -267,7 +263,6 @@
             <div class="video-banner__overlay">
               <p class="section-kicker">Motion Editorial</p>
               <h2>Luxury in motion, built for a stronger premium presence.</h2>
-              <!-- <p>Place your video at <strong>assets/videos/auronox-banner.mp4</strong>.</p> -->
             </div>
           </div>
         </div>
@@ -307,9 +302,9 @@
 
         <div class="footer-col">
           <h4>Collections</h4>
-          <a href="./pages/shop.html?category=men">Men</a>
-          <a href="./pages/shop.html?category=women">Women</a>
-          <a href="./pages/shop.html?category=accessories">Accessories</a>
+          <a href="./pages/shop.html?category=men" class="require-auth">Men</a>
+          <a href="./pages/shop.html?category=women" class="require-auth">Women</a>
+          <a href="./pages/shop.html?category=accessories" class="require-auth">Accessories</a>
           <a href="./pages/heritage.html">Heritage</a>
         </div>
 
@@ -317,7 +312,7 @@
           <h4>Company</h4>
           <a href="./index.html">Home</a>
           <a href="./pages/contact.html">Contact</a>
-          <a href="./pages/orders.html">Orders</a>
+          <a href="./pages/orders.html" class="require-auth">Orders</a>
           <a href="./pages/client-portal.html">Account</a>
         </div>
 
@@ -354,13 +349,18 @@
       });
 
       document.addEventListener("click", (e) => {
-        if (!mobileDrawer.contains(e.target) && !menuToggle.contains(e.target)) {
+        if (
+          mobileDrawer &&
+          menuToggle &&
+          !mobileDrawer.contains(e.target) &&
+          !menuToggle.contains(e.target)
+        ) {
           menuToggle.classList.remove("active");
           mobileDrawer.classList.remove("open");
         }
       });
 
-      mobileDrawer.querySelectorAll("a").forEach((link) => {
+      mobileDrawer?.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
           menuToggle.classList.remove("active");
           mobileDrawer.classList.remove("open");
@@ -372,11 +372,7 @@
       if (navCartCount) navCartCount.textContent = count;
     });
   </script>
-  <script src="./js/auth.js"></script>
-<script>
-  document.querySelectorAll(".require-auth").forEach(el => {
-    el.addEventListener("click", requireAuth);
-  });
-</script>
+
+  <script src="./assets/js/auth-guard.js"></script>
 </body>
 </html>
