@@ -1,5 +1,6 @@
 // frontend/assets/js/pages/client-portal.js
-const API_BASE = import.meta.env.VITE_API_BASE;
+
+const API_BASE = "https://auronox-b.onrender.com/api";
 
 const menuToggle = document.getElementById("menuToggle");
 const mobileDrawer = document.getElementById("mobileDrawer");
