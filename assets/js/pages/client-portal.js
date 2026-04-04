@@ -371,6 +371,17 @@ registerForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
   clearMessage();
 
+  
+const redirect = localStorage.getItem("redirect_after_login");
+
+if (redirect) {
+  localStorage.removeItem("redirect_after_login");
+  window.location.href = redirect;
+} else {
+  window.location.href = "/index.html";
+}
+
+  
   const formData = new FormData(registerForm);
   const payload = {
     name: String(formData.get("name") || "").trim(),
