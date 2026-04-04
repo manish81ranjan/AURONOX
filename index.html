@@ -372,5 +372,11 @@
       if (navCartCount) navCartCount.textContent = count;
     });
   </script>
+  <script src="./js/auth.js"></script>
+<script>
+  document.querySelectorAll(".require-auth").forEach(el => {
+    el.addEventListener("click", requireAuth);
+  });
+</script>
 </body>
 </html>
